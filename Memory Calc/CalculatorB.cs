@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Memory_Calc
 {
-    class CalculatorB
+    public class CalculatorB
     {
 
 

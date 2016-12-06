@@ -46,6 +46,7 @@ namespace Memory_Calc
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtAnswer.Text = "0";
+            value = 0;
             equation.Text = "";
         }
 
