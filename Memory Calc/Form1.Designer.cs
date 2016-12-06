@@ -186,6 +186,7 @@
             this.btnNegate.TabIndex = 12;
             this.btnNegate.Text = "+/-";
             this.btnNegate.UseVisualStyleBackColor = true;
+            this.btnNegate.Click += new System.EventHandler(this.btnNegate_Click);
             // 
             // btnPlus
             // 
@@ -225,6 +226,7 @@
             this.btnSqrt.TabIndex = 16;
             this.btnSqrt.Text = "sqrt";
             this.btnSqrt.UseVisualStyleBackColor = true;
+            this.btnSqrt.Click += new System.EventHandler(this.btnSqrt_Click);
             // 
             // btnRec
             // 
@@ -234,6 +236,7 @@
             this.btnRec.TabIndex = 17;
             this.btnRec.Text = "1/x";
             this.btnRec.UseVisualStyleBackColor = true;
+            this.btnRec.Click += new System.EventHandler(this.btnRec_Click);
             // 
             // btnTimes
             // 
@@ -299,6 +302,7 @@
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClear
             // 
@@ -372,6 +376,7 @@
             this.Controls.Add(this.txtAnswer);
             this.Name = "Form1";
             this.Text = "Memory Calculator";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
