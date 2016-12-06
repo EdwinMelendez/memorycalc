@@ -56,14 +56,16 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txtMem = new System.Windows.Forms.TextBox();
+            this.equation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtAnswer
             // 
             this.txtAnswer.Location = new System.Drawing.Point(13, 13);
+            this.txtAnswer.Multiline = true;
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.ReadOnly = true;
-            this.txtAnswer.Size = new System.Drawing.Size(339, 20);
+            this.txtAnswer.Size = new System.Drawing.Size(339, 35);
             this.txtAnswer.TabIndex = 0;
             // 
             // btn1
@@ -74,6 +76,7 @@
             this.btn1.TabIndex = 1;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.button_Click);
             // 
             // btn2
             // 
@@ -83,6 +86,7 @@
             this.btn2.TabIndex = 2;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.button_Click);
             // 
             // btn3
             // 
@@ -92,6 +96,7 @@
             this.btn3.TabIndex = 3;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.button_Click);
             // 
             // btn4
             // 
@@ -101,6 +106,7 @@
             this.btn4.TabIndex = 4;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.button_Click);
             // 
             // btn5
             // 
@@ -110,6 +116,7 @@
             this.btn5.TabIndex = 5;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.button_Click);
             // 
             // btn6
             // 
@@ -119,6 +126,7 @@
             this.btn6.TabIndex = 6;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.button_Click);
             // 
             // btn7
             // 
@@ -128,6 +136,7 @@
             this.btn7.TabIndex = 7;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.button_Click);
             // 
             // btn8
             // 
@@ -137,6 +146,7 @@
             this.btn8.TabIndex = 8;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.button_Click);
             // 
             // btn9
             // 
@@ -146,6 +156,7 @@
             this.btn9.TabIndex = 9;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.button_Click);
             // 
             // btn0
             // 
@@ -155,6 +166,7 @@
             this.btn0.TabIndex = 10;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.button_Click);
             // 
             // btnDecimal
             // 
@@ -164,6 +176,7 @@
             this.btnDecimal.TabIndex = 11;
             this.btnDecimal.Text = ".";
             this.btnDecimal.UseVisualStyleBackColor = true;
+            this.btnDecimal.Click += new System.EventHandler(this.button_Click);
             // 
             // btnNegate
             // 
@@ -182,6 +195,7 @@
             this.btnPlus.TabIndex = 13;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.operator_Click);
             // 
             // btnMinus
             // 
@@ -191,6 +205,7 @@
             this.btnMinus.TabIndex = 14;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.operator_Click);
             // 
             // btnEquals
             // 
@@ -200,6 +215,7 @@
             this.btnEquals.TabIndex = 15;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
             // btnSqrt
             // 
@@ -227,6 +243,7 @@
             this.btnTimes.TabIndex = 18;
             this.btnTimes.Text = "*";
             this.btnTimes.UseVisualStyleBackColor = true;
+            this.btnTimes.Click += new System.EventHandler(this.operator_Click);
             // 
             // btnDiv
             // 
@@ -236,6 +253,7 @@
             this.btnDiv.TabIndex = 19;
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
+            this.btnDiv.Click += new System.EventHandler(this.operator_Click);
             // 
             // btnMemClear
             // 
@@ -290,6 +308,7 @@
             this.btnClear.TabIndex = 25;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnExit
             // 
@@ -299,6 +318,7 @@
             this.btnExit.TabIndex = 26;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // txtMem
             // 
@@ -308,11 +328,20 @@
             this.txtMem.Size = new System.Drawing.Size(25, 20);
             this.txtMem.TabIndex = 27;
             // 
+            // equation
+            // 
+            this.equation.AutoSize = true;
+            this.equation.Location = new System.Drawing.Point(263, 16);
+            this.equation.Name = "equation";
+            this.equation.Size = new System.Drawing.Size(0, 13);
+            this.equation.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 259);
+            this.Controls.Add(this.equation);
             this.Controls.Add(this.txtMem);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
@@ -378,6 +407,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtMem;
+        private System.Windows.Forms.Label equation;
     }
 }
 
