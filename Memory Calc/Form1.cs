@@ -12,13 +12,17 @@ namespace Memory_Calc
 {
     public partial class Form1 : Form
     {
+        Double value = 0;
+        String operation = "";
+        Double valueMemory = 0;
+        bool operation_Pressed = false;
+        Memory myMemCalc = new Memory();
+
         public Form1()
         {
             InitializeComponent();
         }
-        Double value = 0;
-        String operation = "";
-        bool operation_Pressed = false;
+      
 
         private void button_Click(object sender, EventArgs e)
         {
@@ -153,6 +157,33 @@ namespace Memory_Calc
         private void btnBack_Click(object sender, EventArgs e)
         {
             CalculatorB.Back(txtAnswer);
+        }
+
+        private void btnMemClear_Click(object sender, EventArgs e)
+        {
+            txtMem.Text = "";
+            valueMemory = 0;
+        }
+
+        private void btnMemRe_Click(object sender, EventArgs e)
+        {
+            myMemCalc.memorySave(valueMemory);
+            txtMem.Text = valueMemory.ToString();
+        }
+
+        private void btnMemSave_Click(object sender, EventArgs e)
+        {
+            valueMemory = Double.Parse(txtAnswer.Text);
+
+            myMemCalc.memorySave(valueMemory);
+
+            txtMem.Text = "M";
+        }
+
+        private void btnMemPlus_Click(object sender, EventArgs e)
+        {
+            myMemCalc.memorySave(valueMemory);
+            txtAnswer.Text = valueMemory.ToString();
         }
     }
 }

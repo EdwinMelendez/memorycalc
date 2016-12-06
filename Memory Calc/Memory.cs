@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Memory_Calc
 {
-   public class Memory : CalculatorB
+   public class Memory 
     {
         private string memStore;
 
@@ -17,9 +17,13 @@ namespace Memory_Calc
 
         }
 
-        double memory = 0;
-        double workingMem = 0;
-        string op = "";
+        static double memValue = 0;
+        public double memorySave(double memoryValue)
+        {
+            memValue = memoryValue;
+
+            return memoryValue;
+        }
 
 
 

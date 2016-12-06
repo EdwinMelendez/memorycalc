@@ -266,6 +266,7 @@
             this.btnMemClear.TabIndex = 20;
             this.btnMemClear.Text = "MC";
             this.btnMemClear.UseVisualStyleBackColor = true;
+            this.btnMemClear.Click += new System.EventHandler(this.btnMemClear_Click);
             // 
             // btnMemRe
             // 
@@ -275,6 +276,7 @@
             this.btnMemRe.TabIndex = 21;
             this.btnMemRe.Text = "MR";
             this.btnMemRe.UseVisualStyleBackColor = true;
+            this.btnMemRe.Click += new System.EventHandler(this.btnMemRe_Click);
             // 
             // btnMemSave
             // 
@@ -284,6 +286,7 @@
             this.btnMemSave.TabIndex = 22;
             this.btnMemSave.Text = "MS";
             this.btnMemSave.UseVisualStyleBackColor = true;
+            this.btnMemSave.Click += new System.EventHandler(this.btnMemSave_Click);
             // 
             // btnMemPlus
             // 
@@ -293,6 +296,7 @@
             this.btnMemPlus.TabIndex = 23;
             this.btnMemPlus.Text = "M+";
             this.btnMemPlus.UseVisualStyleBackColor = true;
+            this.btnMemPlus.Click += new System.EventHandler(this.btnMemPlus_Click);
             // 
             // btnBack
             // 
